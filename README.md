@@ -1,6 +1,6 @@
 # 📰 The New York Times Clone – Pixel Plus Hackathon Project
 
-## 🔗 **Live Demo**: 
+## 🔗 **Live Demo**: https://newyorktimes-pixel.netlify.app/
 
 ---
 
