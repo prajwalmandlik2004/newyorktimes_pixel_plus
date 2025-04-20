@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* NYT-like fonts */
+  @font-face {
+    font-family: 'NYT-Serif';
+    src: url('https://fonts.gstatic.com/s/playfairdisplay/v30/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKdFvXDXbtXK-F2qC0s.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'NYT-Serif';
+    src: url('https://fonts.gstatic.com/s/playfairdisplay/v30/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKeiukDXbtXK-F2qC0s.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'NYT-Sans';
+    src: url('https://fonts.gstatic.com/s/firasans/v17/va9E4kDNxMZdWfMOD5Vvl4jLazX3dA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  :root {
+    --color-primary: #000000;
+    --color-secondary: #666666;
+    --color-background: #FFFFFF;
+    --color-light-gray: #F7F7F7;
+    --color-medium-gray: #E2E2E2;
+    --color-border: #EBEBEB;
+
+    --spacing-xxs: 4px;
+    --spacing-xs: 8px;
+    --spacing-sm: 16px;
+    --spacing-md: 24px;
+    --spacing-lg: 32px;
+    --spacing-xl: 48px;
+    --spacing-xxl: 64px;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    color: var(--color-primary);
+    background-color: var(--color-background);
+    font-family: 'NYT-Sans', sans-serif;
+    line-height: 1.5;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'NYT-Serif', serif;
+    font-weight: bold;
+    line-height: 1.2;
+  }
+}
+
+@layer components {
+  .nyt-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .nyt-grid {
+    @apply grid grid-cols-1 md:grid-cols-6 lg:grid-cols-12 gap-4;
+  }
+
+  .nyt-section-border {
+    @apply border-t border-solid border-gray-200 pt-4;
+  }
+
+  .nyt-button {
+    @apply inline-flex items-center justify-center px-4 py-2 border border-solid border-gray-300 
+           text-sm font-medium rounded-sm text-gray-700 bg-white 
+           hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500
+           transition-colors duration-200;
+  }
+
+  .nyt-button-primary {
+    @apply nyt-button border-black bg-black text-white hover:bg-gray-800;
+  }
+
+  .nyt-link {
+    @apply text-black hover:underline transition-all duration-200;
+  }
+
+  .nyt-section-title {
+    @apply text-xs uppercase tracking-wider font-bold;
+  }
+
+  .headline-xl {
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold leading-tight;
+  }
+
+  .headline-lg {
+    @apply text-2xl md:text-3xl font-bold leading-tight;
+  }
+
+  .headline-md {
+    @apply text-xl md:text-2xl font-bold leading-tight;
+  }
+
+  .headline-sm {
+    @apply text-lg md:text-xl font-bold leading-tight;
+  }
+
+  .headline-xs {
+    @apply text-base font-bold leading-tight;
+  }
+
+  .byline {
+    @apply text-sm text-gray-500;
+  }
+
+  .summary {
+    @apply text-base text-gray-700;
+  }
+}
